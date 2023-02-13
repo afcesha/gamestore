@@ -9,24 +9,24 @@ namespace gamestore.Classes
 {
     internal class Connection
     {
-        public static sql
+        public static SqlConnection sqlConnection = new SqlConnection(@"Data Source = NAYASHOV; Database = gamestore; Integrated Security=true;");
         public void OpenCon()
         {
-            if (connection.State == System.Data.ConnectionState.Closed)
+            if (sqlConnection.State == System.Data.ConnectionState.Closed)
             {
-                connection.Open();
+                sqlConnection.Open();
             }
         }
         public void CloseCon()
         {
-            if (connection.State == System.Data.ConnectionState.Open)
+            if (sqlConnection.State == System.Data.ConnectionState.Open)
             {
-                connection.Close();
+                sqlConnection.Close();
             }
         }
         public SqlConnection GetCon()
         {
-            return connection;
+            return sqlConnection;
         }
     }
 

@@ -53,6 +53,7 @@
             this.SignUpButton.TabIndex = 1;
             this.SignUpButton.Text = "Sign Up";
             this.SignUpButton.UseVisualStyleBackColor = true;
+            this.SignUpButton.Click += new System.EventHandler(this.SignUpButton_Click);
             // 
             // label1
             // 
@@ -74,6 +75,7 @@
             this.Controls.Add(this.SignInButton);
             this.Name = "WelcomeForm";
             this.Text = "WelcomeForm";
+            this.Load += new System.EventHandler(this.WelcomeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
